@@ -19,7 +19,7 @@ jobs:
           command: ./node_modules/.bin/nyc ./node_modules/mocha/bin/_mocha
           
       - store_test_results:
-          path: /tmp/test-reports
+          path: coverage
           
       - store_artifacts:
           path: coverage
