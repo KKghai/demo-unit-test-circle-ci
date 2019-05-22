@@ -16,7 +16,7 @@ jobs:
             - ./node_modules
       - run:
           name: test
-          command: ./node_modules/.bin/nyc ./node_modules/mocha/bin/_mocha --collectCoverage=true
+          command: ./node_modules/.bin/nyc ./node_modules/mocha/bin/_mocha
           
       - store_test_results:
           path: /tmp/test-reports
