@@ -16,7 +16,8 @@ jobs:
             - ./node_modules
       - run:
           name: test
-          command: npm run lint && npm test
+          command: mocha
+          //command: npm run lint && npm test
       - store_artifacts:
           path: test-results.xml
           prefix: tests
