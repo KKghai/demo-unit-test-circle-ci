@@ -27,6 +27,6 @@ jobs:
             
             
        - store_artifacts:
-          path: coverage2
+          path: coverage
 
       
