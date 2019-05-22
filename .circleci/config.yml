@@ -16,5 +16,5 @@ jobs:
             - ./node_modules
       - run:
           name: test
-          command: npm test
+          command: npm ./node_modules/.bin/nyc ./node_modules/mocha/bin/_mocha
       
