@@ -20,4 +20,7 @@ jobs:
           
       - store_test_results:
           path: /tmp/test-reports
+          
+      - store_artifacts:
+          path: coverage
       
