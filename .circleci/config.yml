@@ -10,6 +10,7 @@ jobs:
       - run:
           name: install dependencies
           command: npm install
+      - run: npm install mocha-junit-reporter
       - save_cache:
           key: dependency-cache-{{ checksum "package.json"}}
           paths:
@@ -20,6 +21,4 @@ jobs:
           
       - store_artifacts:
           path: coverage
-          
-      - store_test_results:
-          path: test-results.xml
+
