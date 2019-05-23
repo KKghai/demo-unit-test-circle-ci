@@ -16,4 +16,8 @@ jobs:
             - ./node_modules
       - run:
           name: test
-          command: jest
+          command: ./node_modules/mocha/bin/_mocha
+          
+      - run:
+          name: code-coverage
+          command: ./node_modules/.bin/nyc report --reporter=text-lcov
