@@ -20,3 +20,5 @@ steps:
   displayName: 'npm install and build'
   
 - script: npm test
+
+- task: PublishCodeCoverageResults@1
