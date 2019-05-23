@@ -17,5 +17,3 @@ jobs:
       - run:
           name: test
           command: ./node_modules/mocha/bin/_mocha
-      - store_artifacts:
-            path: coverage
