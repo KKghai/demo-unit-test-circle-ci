@@ -11,13 +11,14 @@ jobs:
           name: install dependencies
           command: npm install
       - run: npm install mocha-junit-reporter
+      - run: mkdir reports
       - save_cache:
           key: dependency-cache-{{ checksum "package.json"}}
           paths:
             - ./node_modules
       - run:
           name: test
-          command: ./node_modules/.bin/nyc ./node_modules/mocha/bin/_mocha
+          command: ./node_modules/.bin/nyc ./node_modules/mocha/bin/_mocha --recursive --timeout=10000 --exit --reporter mocha-junit-reporter --reporter-options mochaFile=reports/mocha/test-results.xml
           
       - store_artifacts:
           path: coverage
